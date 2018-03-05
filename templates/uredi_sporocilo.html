@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Urejanje</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <h1>Urejanje sporocila</h1>
+
+    <form method="post">
+    <input type="text" value="{{ posamezno_sporocilo.sporocilo }}" name="nov_tekst">
+    <p>{{ posamezno_sporocilo.nastanek }}</p>
+    <p>{{ posamezno_sporocilo.key.id() }}</p>
+
+    <button type="submit">Shrani</button>
+    </form>
+
+</body>
+</html>

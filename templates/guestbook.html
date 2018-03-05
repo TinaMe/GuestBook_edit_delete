@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam sporocil gostov hotela Filton</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    {% for sporocilo in seznam %}
+    <p>
+        Ime in priimek: {{sporocilo.imepriimek}}
+        <br>
+        Email naslov: {{ sporocilo.enaslov }}
+        <br>
+        Sporocilo: {{ sporocilo.sporocilo }}
+        <br>
+        Ustvarjeno: {{ sporocilo.nastanek }}
+    </p>
+    <p>
+        <a href="/sporocilo/{{sporocilo.key.id()}}">Link</a>
+        <a href="/sporocilo/{{ sporocilo.key.id() }}/edit"><button>Uredi</button></a>
+        <a href="/sporocilo/{{ sporocilo.key.id() }}/delete"><button>Izbrisi</button></a>
+    </p>
+    {% endfor %}
+</body>
+</html>
+
+
